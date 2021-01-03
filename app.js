@@ -2,6 +2,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+const cors = require('cors');
 
 // Config
 var MONGO_URL = require('./config/config').MONGO_URL;
@@ -23,6 +24,12 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
     next();
 });
+
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions)); //Cross Origin
 
 // logger
 var logger = require('./helpers/logger');
