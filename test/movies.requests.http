@@ -1,7 +1,13 @@
 
 @contentType = application/json
-@baseUrlById = http://localhost:4000/movies/550
+@baseUrlDetailsById = http://localhost:4000/movies/550
+@baseUrlTranslationById = http://localhost:4000/movies/550/translations
+
 
 ### GET Movies Details by ID      
-GET {{baseUrlById}}
+GET {{baseUrlDetailsById}}
+Content-Type: {{contentType}}
+
+### GET Movies Transalation by ID      
+GET {{baseUrlTranslationById}}
 Content-Type: {{contentType}}
