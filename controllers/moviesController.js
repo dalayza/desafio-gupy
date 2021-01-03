@@ -11,7 +11,13 @@ class moviesController {
     }
 
     async getMovieFilter(id) {
-        const data = await axios.get(`${API_URL}${id}?api_key=${API_KEY}`);
+        const data = await axios.get(`${API_URL}${id}?api_key=${API_KEY}&language=en-US`);
+    
+        return data;
+    }
+
+    async getMovieTranslationFilter(id) {
+        const data = await axios.get(`${API_URL}${id}/translations?api_key=${API_KEY}`);
     
         return data;
     }
