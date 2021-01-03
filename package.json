@@ -4,7 +4,7 @@
   "description": "Desafio GUPY",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "babel src --out-dir dist",
     "start": "nodemon app.js"
   },
@@ -33,6 +33,7 @@
     "@babel/core": "^7.12.9",
     "@babel/node": "^7.12.6",
     "@babel/preset-env": "^7.12.7",
+    "jest": "^26.6.3",
     "nodemon": "^1.19.4"
   },
   "bugs": {
