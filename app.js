@@ -76,6 +76,13 @@ app.listen(URL, () => {
     console.log(`Express server port ${URL}: \x1b[32m%s\x1b[0m`, 'online');
 });
 
+// catch 404
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
 //CRON JOB TO UPDATE
 
 // logger.info('========== CRON JOB ==========');
